@@ -1,0 +1,274 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Melissa Giraldo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: one calm left-aligned column. Big name, short intro, a dated timeline for work, quiet chips for skills. */
+:root {
+  --bg: #F1F4F7;
+  --surface: #FFFFFF;
+  --fg: #111C26;
+  --muted: #53606D;
+  --line: #D5DCE3;
+  --accent: #0A6B66;
+  --accent-soft: #D9EFEC;
+  --on-accent: #FFFFFF;
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1519;
+    --surface: #152127;
+    --fg: #E7EEF1;
+    --muted: #9AA9B3;
+    --line: #26353D;
+    --accent: #5ED2C4;
+    --accent-soft: #163A3A;
+    --on-accent: #0D1519;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1519;
+  --surface: #152127;
+  --fg: #E7EEF1;
+  --muted: #9AA9B3;
+  --line: #26353D;
+  --accent: #5ED2C4;
+  --accent-soft: #163A3A;
+  --on-accent: #0D1519;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-block: 56px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Hero */
+.hero { display: flex; flex-direction: column; gap: 22px; }
+.hero h1 {
+  font-size: clamp(3rem, 11vw, 5.75rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.hero h1 span { display: block; color: var(--accent); }
+.role { font-size: 1.2rem; max-width: 34ch; font-weight: 500; }
+.summary { color: var(--muted); max-width: 62ch; }
+
+.contact { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.contact-item {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 8px 8px 16px;
+  min-width: 0;
+}
+.contact-item .label { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.contact-item .value { font-family: var(--font-mono); font-size: 14.5px; user-select: all; overflow-wrap: anywhere; }
+.contact-text { display: flex; flex-direction: column; min-width: 0; }
+.copy {
+  font: 500 13px var(--font-body);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 12px;
+  cursor: pointer;
+  flex: none;
+}
+.copy:hover { background: var(--accent); color: var(--on-accent); }
+
+/* Sections */
+section { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px 32px; }
+section > .eyebrow { padding-top: 8px; }
+.body { min-width: 0; }
+
+/* Skills */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.chips li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 500;
+}
+.chips li small { color: var(--muted); font-weight: 400; margin-left: 6px; }
+
+/* Experience timeline */
+.jobs { display: flex; flex-direction: column; gap: 40px; list-style: none; margin: 0; padding: 0; }
+.job { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 20px; }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 20px; }
+.job h3 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
+.dates { font-family: var(--font-mono); font-size: 13.5px; color: var(--accent); white-space: nowrap; }
+.where { color: var(--muted); }
+.job ul { margin: 8px 0 0; padding-left: 1.15em; display: grid; gap: 6px; }
+.job li::marker { color: var(--accent); }
+
+/* Education */
+.edu h3 { font-size: 1.5rem; letter-spacing: -0.01em; }
+.edu .where { margin-top: 2px; }
+.edu-row { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 18px; align-items: baseline; }
+.gpa { font-family: var(--font-display); font-weight: 700; font-size: 2.6rem; line-height: 1; color: var(--accent); }
+.gpa-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 6px; }
+.degree { max-width: 30ch; }
+
+footer { color: var(--muted); font-family: var(--font-mono); font-size: 12.5px; }
+
+@media (max-width: 640px) {
+  body { padding-block: 36px 56px; font-size: 16px; }
+  .wrap { gap: 48px; }
+  section { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  section > .eyebrow { padding-top: 0; }
+  .contact-item { width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .copy { transition: background .15s, color .15s; }
+}
+</style>
+
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Personal page</p>
+    <h1>Melissa <span>Giraldo</span></h1>
+    <p class="role">Secondary Education student at William Paterson University, looking for flexible part-time work.</p>
+    <p class="summary">Motivated student with a strong work ethic and the ability to adapt quickly while learning new skills. I do well academically and I am building professional experience through clear communication and good time management.</p>
+    <div class="contact">
+      <div class="contact-item">
+        <div class="contact-text"><span class="label">Email</span><span class="value" id="email-val">melig13@icloud.com</span></div>
+        <button class="copy" type="button" data-target="email-val" id="copy-email">Copy</button>
+      </div>
+      <div class="contact-item">
+        <div class="contact-text"><span class="label">Phone</span><span class="value" id="phone-val">201-286-2782</span></div>
+        <button class="copy" type="button" data-target="phone-val" id="copy-phone">Copy</button>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="skills-h">
+    <h2 class="eyebrow" id="skills-h">Skills</h2>
+    <div class="body">
+      <ul class="chips">
+        <li>Team player</li>
+        <li>Coachable</li>
+        <li>Task and time efficiency</li>
+        <li>Bilingual <small>Español · English</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-h">
+    <h2 class="eyebrow" id="exp-h">Experience</h2>
+    <div class="body">
+      <ol class="jobs">
+        <li class="job">
+          <div class="job-head">
+            <h3>Secretary</h3>
+            <span class="dates">04/2024 – Current</span>
+          </div>
+          <p class="where">Chavez Construction Group Corp. · Paterson, NJ</p>
+          <ul>
+            <li>Coordinated office communications and handled incoming correspondence efficiently.</li>
+            <li>Assisted in preparing reports and presentations for internal and external stakeholders.</li>
+            <li>Maintained filing systems for confidential documents and organized files for easy retrieval.</li>
+            <li>Sent and distributed mail and parcels.</li>
+            <li>Sorted mail and distributed it to the right people or departments.</li>
+            <li>Created and updated spreadsheets to track and report data.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <div class="job-head">
+            <h3>Front Desk Receptionist</h3>
+            <span class="dates">08/2021 – 03/2024</span>
+          </div>
+          <p class="where">Lotus Family Dental LLC. · Elmwood Park, NJ</p>
+          <ul>
+            <li>Answered incoming calls and routed callers to the correct departments efficiently.</li>
+            <li>Set up appointments and updated staff and management calendars.</li>
+            <li>Protected confidential client and employee information during daily front desk work.</li>
+            <li>Welcomed customers with friendly service and created positive first impressions.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="edu-h" class="edu">
+    <h2 class="eyebrow" id="edu-h">Education</h2>
+    <div class="body">
+      <h3>William Paterson University of New Jersey</h3>
+      <p class="where">Wayne, NJ</p>
+      <div class="edu-row">
+        <div>
+          <span class="gpa">3.86</span>
+          <span class="gpa-label">GPA average</span>
+        </div>
+        <p class="degree"><strong>Degree in progress</strong><br>Secondary Education</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>Melissa Giraldo · Paterson / Wayne, NJ area</footer>
+</main>
+
+<script>
+(function () {
+  function fallbackCopy(el) {
+    try {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+    } catch (e) {}
+  }
+  document.querySelectorAll(".copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.getElementById(btn.getAttribute("data-target"));
+      var text = el.textContent.trim();
+      var done = function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {
+          fallbackCopy(el);
+          btn.textContent = "Selected";
+          setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+        });
+      } else {
+        fallbackCopy(el);
+        btn.textContent = "Selected";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+      }
+    });
+  });
+})();
+</script>
+
+</body></html>
